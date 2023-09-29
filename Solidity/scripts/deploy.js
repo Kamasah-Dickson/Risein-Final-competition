@@ -1,33 +1,48 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
-const hre = require("hardhat");
+// This script deploys the BNBFaucet contract to the Binance Smart Chain (BSC) testnet and verifies it on BSCScan.
+
+// You can run this script with `npx hardhat run scripts/deploy.js`.
+
+const { ethers, run, network } = require("hardhat");
+const updateFrontend = require("./updateFrontend");
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const unlockTime = currentTimestampInSeconds + 60;
+	const BNBFaucetFactory = await ethers.getContractFactory("BnbFaucet");
 
-  const lockedAmount = hre.ethers.parseEther("0.001");
+	console.log(".............Deploying contract...........");
 
-  const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
-
-  await lock.waitForDeployment();
-
-  console.log(
-    `Lock with ${ethers.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
-  );
+	const BNBFaucet = await BNBFaucetFactory.deploy();
+	await BNBFaucet.waitForDeployment();
+	const contractAddress = await BNBFaucet.getAddress();
+	await updateFrontend(contractAddress);
+	console.log(`deployed contract to: ${contractAddress}`);
+	// verify our contract if the chainId is 97 which is bnb and the bscscan api key is true
+	if (network.config.chainId === 97 && process.env.BINANCESCAN_API_KEY) {
+		// am waiting for a few blocks to be mined before i verify because bscscan might not know about the transaction yet
+		await BNBFaucet.deploymentTransaction().wait(6);
+		await verify(contractAddress, []);
+	}
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
+// automatically verify contract on bscscan
+const verify = async (contractAddress, args) => {
+	console.log("........verifying contract.......");
+
+	try {
+		await run("verify:verify", {
+			address: contractAddress,
+			constructorArguments: args,
+		});
+	} catch (e) {
+		//check if already verified
+		if (e.message.toLowerCase().includes("already verified")) {
+			console.log("This contract is already verified!");
+		} else {
+			console.log(e);
+		}
+	}
+};
+
 main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+	console.error(error);
+	process.exitCode = 1;
 });
