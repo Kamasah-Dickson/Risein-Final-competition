@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Nunito';
+  }
+}
+
+.bg-animate {
+  background: linear-gradient(-45deg, #0242a5, #c904f1, #fe3137);
+  background-size: 400% 400%;
+  animation: change 5s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
