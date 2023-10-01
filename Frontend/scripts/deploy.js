@@ -7,7 +7,7 @@ async function main() {
 	await nftMarketplace.deployed();
 
 	console.log("NFTMarketplace deployed to:", nftMarketplace.address);
-	await lockToken.deploymentTransaction().wait(6);
+	await nftMarketplace.deploymentTransaction().wait(6);
 	await verify(nftMarketplace.address, []);
 }
 
