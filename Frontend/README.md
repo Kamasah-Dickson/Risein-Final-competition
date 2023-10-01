@@ -1,16 +1,12 @@
-
-
 # Polyplace
 
 An open decentralized NFT Marketplace built with Solidity and Next.js, powered by Polygon Technologies. It basically is an open platform where users can mint and trade their own NFTs.
-
 
 ## Table of Contents
 
 - [The Project](#the-project)
 - [Developers](#developers)
 - [Resources](#resources)
-
 
 ## The Project
 
@@ -19,9 +15,6 @@ An open platform where users can mint their own NFTs and list them on a Marketpl
 - A smart contract which represents a collection of NFTs by following the ERC-721 standard.
 - A smart contract which represents the NFT Marketplace and contains all the logic to make offers, execute offers...
 - A Next.js front-end application as a user interface.
-
-
-
 
 ### Project details
 
@@ -33,7 +26,7 @@ Users can perform the following actions on the NFT Marketplace:
 
 #### Mint
 
-Input a name, description and upload a file (image) to mint an NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation through this platform. 
+Input a name, description and upload a file (image) to mint an NFT. Once minted, a representation of this NFT will be displayed in the marketplace and it will be owned by its creator. This is open for everyone, meaning everyone can participate in this NFT creation through this platform.
 
 #### Buy NFT
 
@@ -51,7 +44,6 @@ Below you can view the current's smart contract functions (and its interactions)
 <img src="/assets/NftViz.png" alt="SCV" title="Smart Contract Visualization">
 </p>
 
-
 ## Developers
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -60,8 +52,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 First, it is required to install Metamask wallet browser extension: https://metamask.io/
 
-Next, you need to configure Metamask to connect to the desired blockchain by using the following link: https://chainlist.org/ and add the network of your choice  by simply connecting your wallet from a test address.
-
+Next, you need to configure Metamask to connect to the desired blockchain by using the following link: https://chainlist.org/ and add the network of your choice by simply connecting your wallet from a test address.
 
 Run the following command in your terminal after cloning the main repo:
 
@@ -124,6 +115,16 @@ To see the list of all the available commands:
 make help
 ```
 
+## deployment
+
+to deploy the sol code and verify it on etherscan please run
+
+```bash
+
+npm run deploy
+
+```
+
 That's it! You now have the `Next.js` app running in a Docker container. You can make changes to the app by modifying the files in the pages directory, and the changes will be automatically reflected in the running container.
 
 ### Smart Contract development
@@ -158,7 +159,7 @@ npx hardhat run scripts/deploy.js --network localhost
 
 If all goes well, a new smart contract address refering the NFT Marketplace will be generated. Paste this address in the `constants.js` file.
 
-Next, remove the argument provided in the `JsonRpcProvider` which is located in the __line 111__ of the `NFTContext.js` file.
+Next, remove the argument provided in the `JsonRpcProvider` which is located in the **line 111** of the `NFTContext.js` file.
 
 Finally, run the frontend on a new terminal to open the User Interface:
 
@@ -167,7 +168,6 @@ npm run dev
 ```
 
 A local instance of Polyplace will be up and running on your local environment.
-
 
 ### Tech stack
 
@@ -183,11 +183,10 @@ A local instance of Polyplace will be up and running on your local environment.
 
 ### Future Ideas
 
-- Clear deploy on Polygon Mainnet. 
+- Clear deploy on Polygon Mainnet.
 - Auction features.
 - Bulk upload of NFTs as collections.
 - Creator details page.
-
 
 ## Resources
 
