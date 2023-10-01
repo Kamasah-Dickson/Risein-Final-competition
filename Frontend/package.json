@@ -1,31 +1,42 @@
 {
-    "name": "nft-drop-tutorial",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@headlessui/react": "^1.6.3",
-        "@heroicons/react": "^1.0.6",
-        "@thirdweb-dev/react": "^2.3.12",
-        "@thirdweb-dev/sdk": "^2.3.1",
-        "airtable": "^0.11.4",
-        "ethers": "^5.6.8",
-        "next": "12.1.6",
-        "react": "18.1.0",
-        "react-dom": "18.1.0"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.7",
-        "eslint": "8.14.0",
-        "eslint-config-next": "12.1.6",
-        "postcss": "^8.4.14",
-        "prettier": "^2.6.2",
-        "prettier-plugin-tailwindcss": "^0.1.11",
-        "tailwindcss": "^3.0.24"
-    }
+	"name": "nft_marketplace",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@nomiclabs/hardhat-ethers": "2.0.5",
+		"@nomiclabs/hardhat-waffle": "^2.0.5",
+		"@openzeppelin/contracts": "^4.7.3",
+		"@vercel/analytics": "^0.1.1",
+		"axios": "0.26.0",
+		"dotenv": "^16.3.1",
+		"ethers": "^5.5.4",
+		"framer-motion": "^6.5.1",
+		"hardhat": "^2.12.0",
+		"ipfs-http-client": "^56.0.1",
+		"next": "12.1.0",
+		"next-themes": "0.1.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-dropzone": "12.0.4",
+		"react-icons": "^4.4.0",
+		"web3modal": "1.9.5"
+	},
+	"devDependencies": {
+		"autoprefixer": "10.4.2",
+		"eslint": "^8.16.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-next": "12.1.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-react": "^7.30.0",
+		"eslint-plugin-react-hooks": "^4.5.0",
+		"postcss": "8.4.7",
+		"tailwindcss": "3.0.23"
+	}
 }
