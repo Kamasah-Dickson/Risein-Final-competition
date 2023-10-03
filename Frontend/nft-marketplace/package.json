@@ -1,0 +1,33 @@
+{
+  "name": "nft-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "next build && next export && npx thirdweb@latest upload out"
+  },
+  "dependencies": {
+    "@thirdweb-dev/chains": "^0",
+    "@thirdweb-dev/react": "^3",
+    "@thirdweb-dev/sdk": "^3",
+    "@thirdweb-dev/tsconfig": "^0.1.7",
+    "ethers": "^5.7.2",
+    "next": "^13",
+    "nextjs-progressbar": "^0.0.16",
+    "react": "^18.2",
+    "react-dom": "^18.2",
+    "react-hook-form": "^7.43.0",
+    "react-hot-toast": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11",
+    "@types/react": "^18",
+    "eslint": "^8.29.0",
+    "eslint-config-next": "^13",
+    "typescript": "^4.9.4"
+  }
+}

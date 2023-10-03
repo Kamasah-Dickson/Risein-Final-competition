@@ -1,0 +1,92 @@
+.navContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	background-color: transparent !important;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+}
+
+.nav {
+	display: flex;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	background-color: transparent !important;
+}
+
+.navLeft {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	transition: all 0.15s ease-in-out;
+}
+
+.navMiddle {
+	display: flex;
+	margin-left: 12px;
+	flex-direction: row;
+	align-items: center;
+	gap: 24px;
+}
+
+.link {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	line-height: 16px;
+	transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.homeLink:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.navRight {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	align-items: center;
+	justify-content: center;
+}
+
+.profileImage {
+	margin-top: 6px;
+	transition: all 0.15s ease-in-out;
+}
+
+.profileImage:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.homeLink {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.buttonLink:hover {
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Sreens less than 720px */
+@media (max-width: 500px) {
+	.navConnect {
+		display: none !important;
+	}
+}

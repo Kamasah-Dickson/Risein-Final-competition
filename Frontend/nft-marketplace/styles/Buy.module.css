@@ -1,0 +1,59 @@
+.nftGridContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1%;
+  width: 100%;
+}
+
+.nftContainer {
+  width: 17.8%;
+  margin: 8px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translate3d(0px, 0px, 0px);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  max-height: 382px;
+  transition: all 0.25s ease-in-out;
+}
+
+.nftContainer:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -4px, 0px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  padding: 8px;
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 760px) and (max-width: 1200px) {
+  .nftContainer {
+    width: 22%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+  .nftContainer {
+    width: 29%;
+  }
+}
+
+/* Less than 600 */
+@media (max-width: 600px) {
+  .nftContainer {
+    width: 45%;
+  }
+}

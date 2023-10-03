@@ -1,0 +1,62 @@
+.coverImage {
+	width: 100%;
+	background-color: #272a2d;
+	height: 300px;
+	border-radius: 16px;
+}
+
+.profilePicture {
+	width: 132px;
+	height: 132px;
+	border-radius: 132px;
+	vertical-align: inherit;
+	outline: 3px solid rgba(255, 255, 255, 0.1);
+	margin-top: -72px;
+	margin-left: 5%;
+}
+
+.profileName {
+	margin-left: 2.5%;
+}
+
+.tabs {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.tab {
+	padding: 16px;
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
+	transition: color 0.1s ease-in-out;
+}
+
+.tab:hover {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.activeTab {
+	color: rgba(255, 255, 255, 1);
+	border-bottom: 2px solid #0294fe;
+	color: #0294fe;
+}
+
+.tabContent {
+	display: none;
+	height: 0px;
+	opacity: 0;
+	transition: all 0.1s linear;
+}
+
+.activeTabContent {
+	display: flex;
+	flex-direction: row;
+	opacity: 1;
+}
