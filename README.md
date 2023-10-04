@@ -4,7 +4,7 @@ Live site: https://digitalodyssey.vercel.app/
 
 # NFT Marketplace V3
 
-Create an NFT marketplace on top of your NFT collection on **any** EVM-compatible blockchain.
+Create an NFT marketplace on top of your NFT collection on the **bnb-chain-testnet** blockchain.
 
 ## Installation
 
