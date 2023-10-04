@@ -4,6 +4,15 @@ import { Navbar } from "../components/Navbar/Navbar";
 import NextNProgress from "nextjs-progressbar";
 import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
+import { Metadata } from "next";
+import Footer from "../components/Footer/Footer";
+
+export const metadata: Metadata = {
+	title: "Digital Odyssey",
+	description: "The number one NFT marketplace in the world",
+	creator: "Kamasah Dickson",
+	keywords: ["NFT", "Web3", "NFT marketplace"],
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -24,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Navbar />
 			{/* Render the actual component (page) */}
 			<Component {...pageProps} />
+			<Footer />
 		</ThirdwebProvider>
 	);
 }

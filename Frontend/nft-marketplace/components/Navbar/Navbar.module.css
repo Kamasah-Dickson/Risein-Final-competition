@@ -19,8 +19,10 @@
 	padding-bottom: 20px;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
 	background-color: transparent !important;
+	width: min(100% - 1.6em, 75rem);
+	margin-inline: auto;
+	gap: 10px;
 }
 
 .navLeft {
@@ -82,11 +84,4 @@
 
 .buttonLink:hover {
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-}
-
-/* Sreens less than 720px */
-@media (max-width: 500px) {
-	.navConnect {
-		display: none !important;
-	}
 }
