@@ -38,7 +38,7 @@ Start the server
 
 ## Environment Variables
 
-To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
+To run this project, you will need to add environment variables. checkout the thirdweb v3 marketplace for your variables and key
 
 ## Deployment
 
