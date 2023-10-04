@@ -85,3 +85,24 @@
 .buttonLink:hover {
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
+
+.socialContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.socialContainer li {
+	list-style: none;
+	opacity: 0.6;
+}
+
+.socialContainer li:hover {
+	opacity: 1;
+}
+
+@media (max-width: 600px) {
+	.socialContainer {
+		display: none;
+	}
+}
