@@ -72,6 +72,7 @@ const Home: NextPage = () => {
 					alt="Hero asset, NFT marketplace"
 					quality={100}
 					className={styles.heroAsset}
+					priority
 				/>
 			</div>
 			<Toaster position="bottom-center" reverseOrder={false} />
