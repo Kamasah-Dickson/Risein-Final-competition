@@ -58,5 +58,6 @@
 .activeTabContent {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	opacity: 1;
 }
