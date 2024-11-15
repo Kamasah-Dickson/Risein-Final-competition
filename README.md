@@ -1,5 +1,6 @@
 # [Download Photoshop-AI-2024-free] ()
 
+![photo_2024-11-15_13-10-50](https://github.com/user-attachments/assets/3bde170e-6ecb-4252-a03f-0628751bd206)
 
 
 ## Key Takeaways
